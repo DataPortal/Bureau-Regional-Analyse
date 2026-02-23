@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>ONU Femmes WCARO — Brief stratégique humanitaire 2024–2027</title>
+  <meta name="description" content="Stratégie opérationnelle humanitaire ONU Femmes — Afrique de l’Ouest et du Centre (2024–2027). Brief digital décisionnel (GiHA / LEAP)."/>
+  <link rel="stylesheet" href="style.css"/>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Chart.js -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+</head>
+
+<body>
+  <!-- Top bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <img class="brand-logo" src="assets/img/unwomen_logo.png" alt="ONU Femmes"/>
+        <div class="brand-text">
+          <div class="brand-kicker">WCARO • Action humanitaire</div>
+          <div class="brand-title">Brief stratégique • 2024–2027</div>
+        </div>
+      </div>
+
+      <nav class="nav">
+        <a href="#snapshot">Snapshot</a>
+        <a href="#context">Contexte</a>
+        <a href="#gender">Genre</a>
+        <a href="#pillars">GiHA / LEAP</a>
+        <a href="#investment">Investment</a>
+      </nav>
+
+      <div class="topbar-actions">
+        <button class="btn btn-ghost" id="btnPrint">Imprimer</button>
+        <a class="btn btn-primary" href="#investment">Call to action</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg">
+      <img src="assets/img/hero.jpg" alt="" class="hero-img"/>
+      <div class="hero-overlay"></div>
+      <div class="hero-pattern"></div>
+    </div>
+
+    <div class="container hero-inner">
+      <div class="hero-left reveal">
+        <div class="pill">Stratégie opérationnelle humanitaire • Afrique de l’Ouest & du Centre</div>
+        <h1>Mettre l’égalité de genre au cœur de la performance humanitaire</h1>
+        <p class="hero-sub">
+          Un brief décisionnel pour opérationnaliser <strong>GiHA</strong> (transformation de la coordination)
+          et <strong>LEAP</strong> (protection & moyens de subsistance), avec une approche nexus
+          <strong>Humanitaire–Développement–Paix</strong>.
+        </p>
+
+        <div class="hero-message">
+          <div class="hero-message-title">Message décisionnel</div>
+          <div class="hero-message-text">
+            Sans intégration systématique du genre, les réponses humanitaires risquent de renforcer durablement les inégalités,
+            réduisant l’efficacité des investissements et la résilience des communautés.
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="#snapshot">Voir le snapshot</a>
+          <button class="btn btn-ghost" id="btnExpandAll">Ouvrir tous les détails</button>
+        </div>
+
+        <div class="hero-meta">
+          <span class="meta-chip">IASC • Co-lead GR GiHA</span>
+          <span class="meta-chip">Localisation & WLO/WRO</span>
+          <span class="meta-chip">AAP & PSEA</span>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="hero-card">
+          <div class="hero-card-hd">
+            <div class="hero-card-title">Chiffres clés (signal)</div>
+            <div class="hero-card-note">Vue régionale • 2024</div>
+          </div>
+
+          <div class="kpi-grid" id="kpiGrid">
+            <!-- Injecté par JS -->
+          </div>
+
+          <div class="hero-card-foot">
+            <div class="tiny">
+              Sources: chiffres “brief” issus de ton document (à compléter/valider au besoin).
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SNAPSHOT -->
+  <section class="section" id="snapshot">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Strategic Snapshot</h2>
+        <p class="section-sub">3 messages qui structurent la décision (What • So what • Now what).</p>
+      </div>
+
+      <div class="cards3">
+        <article class="card reveal">
+          <div class="card-kicker">WHAT</div>
+          <h3>Crises prolongées, interconnectées, structurelles</h3>
+          <p>
+            Conflits, chocs climatiques, fragilité institutionnelle et insécurité alimentaire se combinent,
+            provoquant déplacements, protection gaps et pression sur les services essentiels.
+          </p>
+          <figure class="imgframe">
+            <img src="assets/img/map_region.png" alt="Carte régionale (illustration)"/>
+            <figcaption>Illustration : carte de couverture WCARO</figcaption>
+          </figure>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-kicker">SO WHAT</div>
+          <h3>Le genre est un multiplicateur d’efficacité (ou d’échec)</h3>
+          <p>
+            Les femmes et filles subissent une accumulation de vulnérabilités (VBG, exclusion économique, barrières sociales),
+            ce qui réduit l’efficacité globale des réponses si le genre n’est pas intégré dès la planification.
+          </p>
+          <figure class="imgframe">
+            <img src="assets/img/gender_impact.png" alt="Impact genre (illustration)"/>
+            <figcaption>Illustration : impacts différenciés et risques</figcaption>
+          </figure>
+        </article>
+
+        <article class="card reveal">
+          <div class="card-kicker">NOW WHAT</div>
+          <h3>Transformer le système + renforcer la résilience</h3>
+          <p>
+            Mettre en œuvre une réponse articulée autour de <strong>GiHA</strong> (redevabilité & coordination)
+            et <strong>LEAP</strong> (protection & moyens de subsistance), avec localisation et suivi mesurable.
+          </p>
+          <div class="tagrow">
+            <span class="tag">GiHA</span>
+            <span class="tag">LEAP</span>
+            <span class="tag">HDP Nexus</span>
+            <span class="tag">WLO/WRO</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTEXT -->
+  <section class="section" id="context">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Contexte sécuritaire & humanitaire</h2>
+        <p class="section-sub">
+          Une convergence de fragilités (conflits, climat, déplacements) génère des besoins étendus et prolongés.
+        </p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Résumé régional</h3>
+            <span class="badge">WCA / AOC</span>
+          </div>
+          <p>
+            La région compte <strong>24 pays</strong>, dont <strong>11 classés fragiles</strong>.
+            En 2024, près de <strong>50 millions</strong> de personnes sont exposées à l’insécurité alimentaire,
+            tandis que les déplacements se poursuivent à grande échelle (dont <strong>2,7M</strong> PDI en Afrique de l’Ouest
+            et <strong>2,9M</strong> dans le bassin du Lac Tchad).
+          </p>
+
+          <details class="details">
+            <summary><span>Détails • Afrique de l’Ouest</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Extension de la violence du Sahel vers les zones côtières ; hausse de plus de <strong>250%</strong> des incidents près des frontières côtières (2 ans), > <strong>450</strong> incidents/an.</li>
+                <li>Bénin : décès doublés à <strong>173</strong> ; Togo : <strong>69</strong> morts sur la même période.</li>
+                <li>Déplacements : <strong>2,7M</strong> PDI (2023–2024) ; réfugiés : <strong>292k</strong> en 2024 (vs 130k en 2021).</li>
+                <li>Besoin humanitaire : <strong>14,3M</strong> personnes ; <strong>5,6M</strong> en IPC Phase 3+ (projection).</li>
+              </ul>
+              <figure class="imgframe">
+                <img src="assets/img/context_west.png" alt="Illustration Afrique de l’Ouest"/>
+                <figcaption>Slot image : tendance incidents / déplacements</figcaption>
+              </figure>
+            </div>
+          </details>
+
+          <details class="details">
+            <summary><span>Détails • Afrique centrale</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Trois pôles : Grands Lacs (RDC), Bassin du Lac Tchad, Golfe de Guinée (insécurité maritime).</li>
+                <li>Bassin du Lac Tchad : <strong>10,2M</strong> dans le besoin ; <strong>2,9M</strong> PDI ; <strong>345k</strong> réfugiés ; <strong>228k</strong> retournés.</li>
+                <li>RDC : <strong>25,4M</strong> dans le besoin ; <strong>6,8M</strong> PDI ; <strong>519k</strong> réfugiés ; <strong>814k</strong> retournés ; <strong>120+</strong> groupes armés.</li>
+                <li>Cameroun : +<strong>51%</strong> d’événements violents imputables à Boko Haram/ISWA (2024).</li>
+              </ul>
+              <figure class="imgframe">
+                <img src="assets/img/context_central.png" alt="Illustration Afrique centrale"/>
+                <figcaption>Slot image : foyers de crise & principaux chiffres</figcaption>
+              </figure>
+            </div>
+          </details>
+        </div>
+
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Graphiques rapides</h3>
+            <span class="badge badge-orange">Data view</span>
+          </div>
+
+          <div class="chartbox">
+            <div class="chartcard">
+              <div class="charttitle">Part des enjeux (illustratif)</div>
+              <canvas id="chartDonut" height="220"></canvas>
+              <div class="tiny">Doughnut : pondération illustrative (à remplacer par ta data).</div>
+            </div>
+
+            <div class="chartcard">
+              <div class="charttitle">Population dans le besoin (repères)</div>
+              <canvas id="chartBars" height="240"></canvas>
+              <div class="tiny">Barres : repères document (à valider / actualiser si besoin).</div>
+            </div>
+          </div>
+
+          <div class="intelligence-panel">
+            <div class="intelligence-title">Intelligence Panel</div>
+            <ul>
+              <li><strong>Ce qui change :</strong> diffusion de l’insécurité vers les pays côtiers + crises prolongées.</li>
+              <li><strong>Ce qui casse :</strong> protection gaps, accès services, fatigue des mécanismes de réponse.</li>
+              <li><strong>Décisions requises :</strong> renforcer redevabilité genre (GiHA) + financer LEAP + localisation.</li>
+            </ul>
+          </div>
+
+          <figure class="imgframe">
+            <img src="assets/img/risk_matrix.png" alt="Illustration matrice de risques"/>
+            <figcaption>Slot image : matrice risques / hypothèses</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- GENDER -->
+  <section class="section" id="gender">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Genre & équité</h2>
+        <p class="section-sub">
+          Les crises amplifient les inégalités structurelles et augmentent l’exposition à la VBG, à l’exclusion économique et à la marginalisation décisionnelle.
+        </p>
+      </div>
+
+      <div class="grid2">
+        <div class="card reveal">
+          <div class="card-kicker">Analyse</div>
+          <h3>Inégalités structurelles + crises = effet multiplicateur</h3>
+          <p>
+            Accès inégal à l’éducation, aux ressources économiques, à la santé et à la décision politique.
+            En contexte de crise : hausse VBG, mariages précoces, exploitation, charge de soins accrue et mécanismes d’adaptation négatifs.
+          </p>
+
+          <details class="details">
+            <summary><span>Détails • Afrique de l’Ouest</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Éducation : déscolarisation plus forte des filles, surtout en zones rurales.</li>
+                <li>Emploi : informalité, précarité, sous-représentation dans le formel et la décision.</li>
+                <li>Santé : accès limité aux services SR et maternels.</li>
+                <li>Normes : restrictions autonomie, propriété et mobilité ; VBG persistantes.</li>
+                <li>Défis : mariages précoces (très élevés), VBG (incl. MGF dans certains pays), pauvreté féminisée, crises aggravantes.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="details">
+            <summary><span>Détails • Afrique centrale</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>VBG très élevée en zones de conflit (RDC, RCA, Tchad). En RCA : <strong>11 000+</strong> cas rapportés en 2024 (dont ~32% viols).</li>
+                <li>Mariages précoces et forcés élevés (RCA, Tchad, etc.).</li>
+                <li>Accès limité à la terre, au crédit et à l’emploi formel ; charge domestique non rémunérée 2,5–4×.</li>
+                <li>Déplacements et usage du viol comme arme de guerre renforcent la vulnérabilité.</li>
+                <li>Manque de données fiables : obstacle majeur au pilotage des réponses.</li>
+              </ul>
+            </div>
+          </details>
+
+          <figure class="imgframe">
+            <img src="assets/img/gender_impact.png" alt="Illustration impact genre"/>
+            <figcaption>Slot image : parcours de risque / impacts différenciés</figcaption>
+          </figure>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-kicker">Message HQ</div>
+          <h3>Le genre n’est pas un secteur : c’est un standard de performance</h3>
+          <p>
+            Une réponse “neutre” en genre peut amplifier les inégalités et réduire l’efficacité de l’aide.
+            Cette stratégie ancre l’égalité de genre dans la coordination, la planification (HRP) et la mise en œuvre.
+          </p>
+
+          <div class="quote">
+            « Intégrer l’équité entre les sexes, c’est évaluer les incidences pour les femmes et pour les hommes de toute action envisagée… »
+            <span>— Déclaration et Programme d’action de Beijing, 1995</span>
+          </div>
+
+          <div class="donorbox">
+            <div class="donorbox-title">Pourquoi investir</div>
+            <p>
+              L’intégration du genre réduit les risques de protection, améliore le ciblage, renforce la redevabilité et accélère la résilience.
+            </p>
+            <div class="donorbox-actions">
+              <a class="btn btn-primary" href="#investment">Voir l’Investment Case</a>
+              <button class="btn btn-ghost" data-scroll="#pillars">Voir les piliers</button>
+            </div>
+          </div>
+
+          <figure class="imgframe">
+            <img src="assets/img/donors.png" alt="Illustration investment"/>
+            <figcaption>Slot image : impact / ROI humanitaire</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PILLARS -->
+  <section class="section" id="pillars">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Réponse stratégique 2024–2027</h2>
+        <p class="section-sub">
+          Deux piliers complémentaires : <strong>GiHA</strong> (changer le système) et <strong>LEAP</strong> (changer la vie).
+        </p>
+      </div>
+
+      <div class="cards2">
+        <article class="card big reveal">
+          <div class="card-kicker">Pilier 1</div>
+          <h3>GiHA — Coordination & redevabilité du système</h3>
+          <p>
+            Faciliter l’intégration de l’égalité de genre et le leadership des femmes affectées par les crises
+            dans la coordination et la mise en œuvre des réponses humanitaires et aux réfugiés menées par l’ONU.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mini-title">Objectifs</div>
+              <ul class="bullets">
+                <li>Renforcer la redevabilité envers les engagements (IASC Gender Policy, Call to Action VBG).</li>
+                <li>Institutionnaliser la participation des femmes et WLO/WRO dans les mécanismes.</li>
+                <li>Accroître la cohérence UNCT/HCT/Clusters/GTG.</li>
+              </ul>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Leviers</div>
+              <ul class="bullets">
+                <li>GTG/GiHA renforcés, appui HRP, déploiements techniques (GenCap/Surge si applicable).</li>
+                <li>Monitoring via cadres scorecard / marqueurs (GEM) / UNCT-SWAP (selon disponibilité).</li>
+                <li>Programmes conjoints (CERF, etc.) + plaidoyer financement flexible.</li>
+              </ul>
+            </div>
+          </div>
+
+          <details class="details">
+            <summary><span>Détails • Opérationnalisation</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Impliquer RC/UNCT pour mainstreaming genre dans initiatives HDP.</li>
+                <li>Synchroniser mécanismes : HCT, clusters (protection/VBG), GTG, GiHA.</li>
+                <li>Plans d’action GTG : recommandations, UNCT-SWAP, GEM, mobilisation ressources, knowledge sharing.</li>
+                <li>Programmes conjoints : formation gestion cas VBG, participation communautaire, réponses coordonnées.</li>
+                <li>Apprentissage : panels, sommets, produits de connaissance et retours d’expérience.</li>
+              </ul>
+              <figure class="imgframe">
+                <img src="assets/img/giah_coordination.png" alt="Illustration GiHA"/>
+                <figcaption>Slot image : schéma coordination / cycle HRP</figcaption>
+              </figure>
+            </div>
+          </details>
+        </article>
+
+        <article class="card big reveal">
+          <div class="card-kicker">Pilier 2</div>
+          <h3>LEAP — Protection & moyens de subsistance</h3>
+          <p>
+            Protéger et soutenir les moyens de subsistance des femmes et des filles touchées par la crise,
+            afin de répondre à leurs besoins immédiats, accélérer le relèvement et renforcer la résilience.
+          </p>
+
+          <div class="mini-grid">
+            <div class="mini">
+              <div class="mini-title">Objectifs</div>
+              <ul class="bullets">
+                <li>Accès à des services holistiques (protection, SR, soutien psychosocial) selon contexte.</li>
+                <li>Relèvement économique : compétences, accès aux ressources, filets de sécurité.</li>
+                <li>Renforcement capacités nationales pour “reconstruire mieux et équitablement”.</li>
+              </ul>
+            </div>
+            <div class="mini">
+              <div class="mini-title">Approche</div>
+              <ul class="bullets">
+                <li>Évaluations sensibles au genre + intégration dans plans humanitaires.</li>
+                <li>Partenariats (CEDEAO/CEEAC/UA, SNU, WLO/WRO) + localisation.</li>
+                <li>Plaidoyer + financement flexible direct aux organisations dirigées par des femmes.</li>
+              </ul>
+            </div>
+          </div>
+
+          <details class="details">
+            <summary><span>Détails • Paquet LEAP</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Évaluation des besoins et analyse genre (violence, accès ressources, protection).</li>
+                <li>Renforcement des capacités : ateliers, échanges Sud-Sud, DRR & action humanitaire sensibles au genre.</li>
+                <li>Projets ciblés : prévention, préparation, réponse, accès aux compétences et aux forums de décision.</li>
+                <li>Plaidoyer : inclusion des femmes dans paix/sécurité et architecture humanitaire.</li>
+                <li>Suivi : indicateurs résilience, réduction violence, empowerment économique.</li>
+              </ul>
+              <figure class="imgframe">
+                <img src="assets/img/leap_livelihoods.png" alt="Illustration LEAP"/>
+                <figcaption>Slot image : parcours LEAP (protection → relèvement → résilience)</figcaption>
+              </figure>
+            </div>
+          </details>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- RISKS & ASSUMPTIONS -->
+  <section class="section" id="risks">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Risques & hypothèses opératoires</h2>
+        <p class="section-sub">Transparence HQ : risques critiques, hypothèses de réussite et mesures d’atténuation.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Risques (4 catégories)</h3>
+            <span class="badge badge-orange">Critical</span>
+          </div>
+
+          <div class="risk-matrix">
+            <div class="risk-row">
+              <div class="risk-cell risk-title">Crises</div>
+              <div class="risk-cell">Dégradation rapide (conflits/climat/migrations), exposition accrue VBG, inégalités aggravées.</div>
+            </div>
+            <div class="risk-row">
+              <div class="risk-cell risk-title">Structurel</div>
+              <div class="risk-cell">Normes patriarcales, inégalités économiques, fardeau des soins non rémunérés.</div>
+            </div>
+            <div class="risk-row">
+              <div class="risk-cell risk-title">Systémique</div>
+              <div class="risk-cell">Sous-financement du genre (<strong>39%</strong>), faible consultation WLO, incohérence inter-agence.</div>
+            </div>
+            <div class="risk-row">
+              <div class="risk-cell risk-title">Protection</div>
+              <div class="risk-cell">VBG, exploitation, malnutrition, vulnérabilités intersectionnelles.</div>
+            </div>
+          </div>
+
+          <details class="details">
+            <summary><span>Détails • Atténuation</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Approche nexus HDP ; partenariats CEDEAO/UA/G5/Commission Lac Tchad.</li>
+                <li>Analyse genre intégrée dans HRP et plans de préparation.</li>
+                <li>Localisation : financement direct & accompagnement technique des organisations dirigées par des femmes.</li>
+                <li>Redevabilité : AAP, PSEA, suivi et apprentissage continu “Do no harm”.</li>
+              </ul>
+            </div>
+          </details>
+
+          <figure class="imgframe">
+            <img src="assets/img/risk_matrix.png" alt="Matrice risques (illustration)"/>
+            <figcaption>Slot image : matrice heatmap probabilité/impact</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Hypothèses de réussite</h3>
+            <span class="badge">Enablers</span>
+          </div>
+
+          <div class="assumptions">
+            <div class="as-item">
+              <div class="as-title">Mécanismes adaptés & financés</div>
+              <div class="as-text">Politiques/stratégies articulées aux besoins des femmes marginalisées et financées.</div>
+            </div>
+            <div class="as-item">
+              <div class="as-title">Participation égale & sûre</div>
+              <div class="as-text">Accès sécurisé à la décision, inclusion des réfugiées, personnes handicapées, etc.</div>
+            </div>
+            <div class="as-item">
+              <div class="as-title">Financement & mainstreaming</div>
+              <div class="as-text">Mobilisation SNU et intégration genre dans programmes/politiques (fonds conjoints, CERF…).</div>
+            </div>
+            <div class="as-item">
+              <div class="as-title">Normes & services complets</div>
+              <div class="as-text">Transformation des normes + services holistiques (santé, abris, livelihoods) pour réduire la VBG.</div>
+            </div>
+            <div class="as-item">
+              <div class="as-title">Capacités & accountability</div>
+              <div class="as-text">Institutions renforcées + données & suivi pour respecter engagements.</div>
+            </div>
+          </div>
+
+          <figure class="imgframe">
+            <img src="assets/img/pattern.png" alt="Illustration hypothèses"/>
+            <figcaption>Slot image : schéma Theory of Change</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OPERATING MODEL -->
+  <section class="section" id="model">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Modèle opérationnel</h2>
+        <p class="section-sub">Triple mandat opérationnalisé : Normatif • Coordination • Opérationnel.</p>
+      </div>
+
+      <div class="cards3">
+        <div class="card reveal">
+          <div class="card-kicker">Normatif</div>
+          <h3>Cadres, standards, data</h3>
+          <ul class="bullets">
+            <li>Intégrer cadres internationaux (CEDAW, 1325, Beijing) dans les analyses de besoins.</li>
+            <li>Promouvoir SADDD et outils de collecte (ex. Women Count si applicable).</li>
+            <li>Localisation : amplification voix femmes & filles affectées.</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-kicker">Coordination</div>
+          <h3>Influence du système ONU</h3>
+          <ul class="bullets">
+            <li>Aligner RC/UNCT/HCT et mécanismes cluster/GTG.</li>
+            <li>Appui HRP, scorecards, marqueurs, redevabilité.</li>
+            <li>Programmes conjoints & plaidoyer pour flexibilité budgétaire.</li>
+          </ul>
+        </div>
+
+        <div class="card reveal">
+          <div class="card-kicker">Opérationnel</div>
+          <h3>Résultats terrain via LEAP</h3>
+          <ul class="bullets">
+            <li>Services protection + résilience économique.</li>
+            <li>Partenariats WLO/WRO et financement flexible.</li>
+            <li>Renforcement capacités + gestion des connaissances.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M&E -->
+  <section class="section" id="me">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Suivi & redevabilité</h2>
+        <p class="section-sub">Cadre minimal HQ (à enrichir lorsque tu ajoutes tes indicateurs officiels).</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Cycle de pilotage</h3>
+            <span class="badge">RBM</span>
+          </div>
+          <ul class="bullets">
+            <li>Revue trimestrielle : suivi progrès, goulots, décisions.</li>
+            <li>Revue annuelle : adaptation stratégique, priorités pays, allocation ressources.</li>
+            <li>Exigences transversales : AAP, PSEA, “Do no harm”, données SADDD.</li>
+          </ul>
+
+          <details class="details">
+            <summary><span>Détails • Indicateurs (proposition)</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <div class="kpi-list">
+                <div class="kpi-item">
+                  <div class="kpi-name">GiHA • % HRP intégrant analyse genre</div>
+                  <div class="kpi-desc">Présence d’analyse et priorités femmes/filles dans la planification.</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-name">GiHA • # GTG fonctionnels</div>
+                  <div class="kpi-desc">Plan d’action, réunions, livrables, influence HCT.</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-name">LEAP • # femmes/filles accédant à services holistiques</div>
+                  <div class="kpi-desc">Protection, SR, MHPSS selon contexte.</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-name">LEAP • # femmes soutenues sur moyens de subsistance</div>
+                  <div class="kpi-desc">Compétences, accès ressources, relèvement.</div>
+                </div>
+                <div class="kpi-item">
+                  <div class="kpi-name">Localisation • % financement direct WLO/WRO</div>
+                  <div class="kpi-desc">Mesure l’accès réel des organisations dirigées par des femmes aux ressources.</div>
+                </div>
+              </div>
+            </div>
+          </details>
+        </div>
+
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Chronogramme (cadre)</h3>
+            <span class="badge badge-orange">2024–2027</span>
+          </div>
+
+          <div class="timeline">
+            <div class="t-item">
+              <div class="t-year">2024</div>
+              <div class="t-text">Baseline, priorisation pays, renforcement GTG/GiHA, design des paquets LEAP.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2025</div>
+              <div class="t-text">Mise à l’échelle GiHA, déploiements techniques, lancement/extension programmes LEAP.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2026</div>
+              <div class="t-text">Acceleration investissement, consolidation partenariats, produits de connaissance régionaux.</div>
+            </div>
+            <div class="t-item">
+              <div class="t-year">2027</div>
+              <div class="t-text">Capitalisation, évaluation, plan de transition/renouvellement stratégique.</div>
+            </div>
+          </div>
+
+          <figure class="imgframe">
+            <img src="assets/img/pattern.png" alt="Illustration chronogramme"/>
+            <figcaption>Slot image : roadmap / Gantt simplifié</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INVESTMENT -->
+  <section class="section" id="investment">
+    <div class="container">
+      <div class="section-hd reveal">
+        <h2>Investment Case & Call to Action</h2>
+        <p class="section-sub">Le moment de conversion : pourquoi investir maintenant et où.</p>
+      </div>
+
+      <div class="grid2">
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Pourquoi investir maintenant</h3>
+            <span class="badge badge-orange">Donors</span>
+          </div>
+          <ul class="bullets">
+            <li>Les crises se prolongent : coûts croissants sans correction systémique.</li>
+            <li>Le genre améliore le ciblage, réduit les risques de protection et renforce la redevabilité.</li>
+            <li>Investir dans WLO/WRO augmente la résilience locale et la durabilité.</li>
+          </ul>
+
+          <div class="callout">
+            <strong>Position HQ :</strong> L’égalité de genre n’est pas un “add-on” — c’est une condition d’efficacité humanitaire.
+          </div>
+
+          <details class="details">
+            <summary><span>Détails • Fenêtres de financement (à personnaliser)</span><i class="chev"></i></summary>
+            <div class="details-body">
+              <ul class="bullets">
+                <li>Programmes conjoints (ex : CERF) pour accélérer la coordination et l’impact.</li>
+                <li>Fonds poolés et allocations flexibles pour répondre aux chocs.</li>
+                <li>Financement direct + accompagnement technique des organisations dirigées par des femmes.</li>
+              </ul>
+            </div>
+          </details>
+
+          <figure class="imgframe">
+            <img src="assets/img/donors.png" alt="Illustration bailleurs"/>
+            <figcaption>Slot image : gap de financement / investment priorities</figcaption>
+          </figure>
+        </div>
+
+        <div class="panel reveal">
+          <div class="panel-hd">
+            <h3>Donor Box — Priorités d’investissement</h3>
+            <span class="badge">Focus</span>
+          </div>
+
+          <div class="donor-priorities">
+            <div class="dp">
+              <div class="dp-title">1) Redevabilité genre (GiHA)</div>
+              <div class="dp-text">HRP, clusters, GTG : standards et suivi, appui technique, produits d’analyse.</div>
+            </div>
+            <div class="dp">
+              <div class="dp-title">2) Protection & services holistiques</div>
+              <div class="dp-text">Réduction VBG, accès SR/MHPSS, sécurité et prévention exploitation.</div>
+            </div>
+            <div class="dp">
+              <div class="dp-title">3) Moyens de subsistance (LEAP)</div>
+              <div class="dp-text">Relèvement économique, compétences, accès ressources et résilience.</div>
+            </div>
+            <div class="dp">
+              <div class="dp-title">4) Localisation (WLO/WRO)</div>
+              <div class="dp-text">Financement direct, accompagnement technique, participation décisionnelle.</div>
+            </div>
+          </div>
+
+          <div class="cta-row">
+            <button class="btn btn-primary" id="btnContact">Proposer un appui</button>
+            <button class="btn btn-ghost" data-scroll="#snapshot">Revenir au snapshot</button>
+          </div>
+
+          <div class="contact-card" id="contactCard" hidden>
+            <div class="contact-title">Contact</div>
+            <div class="contact-text">
+              Remplace ce bloc par les contacts officiels WCARO (email, unité, etc.).
+            </div>
+          </div>
+
+          <figure class="imgframe">
+            <img src="assets/img/pattern.png" alt="Illustration call to action"/>
+            <figcaption>Slot image : call to action / partnerships</figcaption>
+          </figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div>
+        <div class="footer-title">ONU Femmes WCARO — Brief digital</div>
+        <div class="tiny">Version web • Déploiement GitHub Pages • Contenu basé sur ton document (2024–2027)</div>
+      </div>
+      <div class="footer-links">
+        <a href="#snapshot">Haut</a>
+        <a href="#context">Contexte</a>
+        <a href="#pillars">Piliers</a>
+        <a href="#investment">Investment</a>
+      </div>
+    </div>
+  </footer>
+
+  <button class="fab" id="fabTop" title="Retour en haut">↑</button>
+
+  <script src="main.js"></script>
+</body>
+</html>
